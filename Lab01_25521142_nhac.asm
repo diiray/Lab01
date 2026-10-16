@@ -11,7 +11,7 @@
 #$t3: thoi luong
 
 .eqv PARAM_A 2
-.eqv PARAM_B 25
+.eqv PARAM_B 4
 .eqv PARAM_INSTR 0
 .eqv PARAM_VOL 100
 
@@ -68,16 +68,16 @@ loop:
 	la $a0, down
 	syscall
 	
-	li $v0, 33
+	li $v0, 31
 	move $a0, $t2
 	move $a1, $t3
 	li $a2, PARAM_INSTR
 	li $a3, PARAM_VOL
 	syscall
 	
-	#li $v0, 32
-	#move $a0, $t3
-	#syscall
+	li $v0, 32
+	move $a0, $t3
+	syscall
 	
 	addi $s3, $s3, 1
 	j loop
